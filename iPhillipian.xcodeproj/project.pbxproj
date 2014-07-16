@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1784B7E71977366A006DEDF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1784B7E61977366A006DEDF9 /* Foundation.framework */; };
+		1784B7E91977366A006DEDF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1784B7E81977366A006DEDF9 /* CoreGraphics.framework */; };
+		1784B7EB1977366A006DEDF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1784B7EA1977366A006DEDF9 /* UIKit.framework */; };
+		1784B7F11977366A006DEDF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1784B7EF1977366A006DEDF9 /* InfoPlist.strings */; };
+		1784B7F31977366A006DEDF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B7F21977366A006DEDF9 /* main.m */; };
+		1784B7F71977366A006DEDF9 /* PHLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B7F61977366A006DEDF9 /* PHLAppDelegate.m */; };
+		1784B7F91977366A006DEDF9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1784B7F81977366A006DEDF9 /* Images.xcassets */; };
+		1784B8001977366A006DEDF9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1784B7FF1977366A006DEDF9 /* XCTest.framework */; };
+		1784B8011977366A006DEDF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1784B7E61977366A006DEDF9 /* Foundation.framework */; };
+		1784B8021977366A006DEDF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1784B7EA1977366A006DEDF9 /* UIKit.framework */; };
+		1784B80A1977366A006DEDF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1784B8081977366A006DEDF9 /* InfoPlist.strings */; };
+		1784B80C1977366A006DEDF9 /* iPhillipianTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B80B1977366A006DEDF9 /* iPhillipianTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1784B8031977366A006DEDF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1784B7DB1977366A006DEDF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1784B7E21977366A006DEDF9;
+			remoteInfo = iPhillipian;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1784B7E31977366A006DEDF9 /* iPhillipian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhillipian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1784B7E61977366A006DEDF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1784B7E81977366A006DEDF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1784B7EA1977366A006DEDF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1784B7EE1977366A006DEDF9 /* iPhillipian-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPhillipian-Info.plist"; sourceTree = "<group>"; };
+		1784B7F01977366A006DEDF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1784B7F21977366A006DEDF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1784B7F41977366A006DEDF9 /* iPhillipian-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPhillipian-Prefix.pch"; sourceTree = "<group>"; };
+		1784B7F51977366A006DEDF9 /* PHLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHLAppDelegate.h; sourceTree = "<group>"; };
+		1784B7F61977366A006DEDF9 /* PHLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PHLAppDelegate.m; sourceTree = "<group>"; };
+		1784B7F81977366A006DEDF9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1784B7FE1977366A006DEDF9 /* iPhillipianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhillipianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1784B7FF1977366A006DEDF9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1784B8071977366A006DEDF9 /* iPhillipianTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPhillipianTests-Info.plist"; sourceTree = "<group>"; };
+		1784B8091977366A006DEDF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1784B80B1977366A006DEDF9 /* iPhillipianTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPhillipianTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1784B7E01977366A006DEDF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784B7E91977366A006DEDF9 /* CoreGraphics.framework in Frameworks */,
+				1784B7EB1977366A006DEDF9 /* UIKit.framework in Frameworks */,
+				1784B7E71977366A006DEDF9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784B7FB1977366A006DEDF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784B8001977366A006DEDF9 /* XCTest.framework in Frameworks */,
+				1784B8021977366A006DEDF9 /* UIKit.framework in Frameworks */,
+				1784B8011977366A006DEDF9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1784B7DA1977366A006DEDF9 = {
+			isa = PBXGroup;
+			children = (
+				1784B7EC1977366A006DEDF9 /* iPhillipian */,
+				1784B8051977366A006DEDF9 /* iPhillipianTests */,
+				1784B7E51977366A006DEDF9 /* Frameworks */,
+				1784B7E41977366A006DEDF9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1784B7E41977366A006DEDF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1784B7E31977366A006DEDF9 /* iPhillipian.app */,
+				1784B7FE1977366A006DEDF9 /* iPhillipianTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1784B7E51977366A006DEDF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1784B7E61977366A006DEDF9 /* Foundation.framework */,
+				1784B7E81977366A006DEDF9 /* CoreGraphics.framework */,
+				1784B7EA1977366A006DEDF9 /* UIKit.framework */,
+				1784B7FF1977366A006DEDF9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1784B7EC1977366A006DEDF9 /* iPhillipian */ = {
+			isa = PBXGroup;
+			children = (
+				1784B7F51977366A006DEDF9 /* PHLAppDelegate.h */,
+				1784B7F61977366A006DEDF9 /* PHLAppDelegate.m */,
+				1784B7F81977366A006DEDF9 /* Images.xcassets */,
+				1784B7ED1977366A006DEDF9 /* Supporting Files */,
+			);
+			path = iPhillipian;
+			sourceTree = "<group>";
+		};
+		1784B7ED1977366A006DEDF9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1784B7EE1977366A006DEDF9 /* iPhillipian-Info.plist */,
+				1784B7EF1977366A006DEDF9 /* InfoPlist.strings */,
+				1784B7F21977366A006DEDF9 /* main.m */,
+				1784B7F41977366A006DEDF9 /* iPhillipian-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1784B8051977366A006DEDF9 /* iPhillipianTests */ = {
+			isa = PBXGroup;
+			children = (
+				1784B80B1977366A006DEDF9 /* iPhillipianTests.m */,
+				1784B8061977366A006DEDF9 /* Supporting Files */,
+			);
+			path = iPhillipianTests;
+			sourceTree = "<group>";
+		};
+		1784B8061977366A006DEDF9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1784B8071977366A006DEDF9 /* iPhillipianTests-Info.plist */,
+				1784B8081977366A006DEDF9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1784B7E21977366A006DEDF9 /* iPhillipian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1784B80F1977366A006DEDF9 /* Build configuration list for PBXNativeTarget "iPhillipian" */;
+			buildPhases = (
+				1784B7DF1977366A006DEDF9 /* Sources */,
+				1784B7E01977366A006DEDF9 /* Frameworks */,
+				1784B7E11977366A006DEDF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPhillipian;
+			productName = iPhillipian;
+			productReference = 1784B7E31977366A006DEDF9 /* iPhillipian.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1784B7FD1977366A006DEDF9 /* iPhillipianTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1784B8121977366B006DEDF9 /* Build configuration list for PBXNativeTarget "iPhillipianTests" */;
+			buildPhases = (
+				1784B7FA1977366A006DEDF9 /* Sources */,
+				1784B7FB1977366A006DEDF9 /* Frameworks */,
+				1784B7FC1977366A006DEDF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1784B8041977366A006DEDF9 /* PBXTargetDependency */,
+			);
+			name = iPhillipianTests;
+			productName = iPhillipianTests;
+			productReference = 1784B7FE1977366A006DEDF9 /* iPhillipianTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1784B7DB1977366A006DEDF9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PHL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Phillipian;
+				TargetAttributes = {
+					1784B7FD1977366A006DEDF9 = {
+						TestTargetID = 1784B7E21977366A006DEDF9;
+					};
+				};
+			};
+			buildConfigurationList = 1784B7DE1977366A006DEDF9 /* Build configuration list for PBXProject "iPhillipian" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1784B7DA1977366A006DEDF9;
+			productRefGroup = 1784B7E41977366A006DEDF9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1784B7E21977366A006DEDF9 /* iPhillipian */,
+				1784B7FD1977366A006DEDF9 /* iPhillipianTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1784B7E11977366A006DEDF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784B7F11977366A006DEDF9 /* InfoPlist.strings in Resources */,
+				1784B7F91977366A006DEDF9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784B7FC1977366A006DEDF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784B80A1977366A006DEDF9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1784B7DF1977366A006DEDF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784B7F31977366A006DEDF9 /* main.m in Sources */,
+				1784B7F71977366A006DEDF9 /* PHLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784B7FA1977366A006DEDF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784B80C1977366A006DEDF9 /* iPhillipianTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1784B8041977366A006DEDF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1784B7E21977366A006DEDF9 /* iPhillipian */;
+			targetProxy = 1784B8031977366A006DEDF9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1784B7EF1977366A006DEDF9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1784B7F01977366A006DEDF9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1784B8081977366A006DEDF9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1784B8091977366A006DEDF9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1784B80D1977366A006DEDF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1784B80E1977366A006DEDF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1784B8101977366A006DEDF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iPhillipian/iPhillipian-Prefix.pch";
+				INFOPLIST_FILE = "iPhillipian/iPhillipian-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1784B8111977366A006DEDF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iPhillipian/iPhillipian-Prefix.pch";
+				INFOPLIST_FILE = "iPhillipian/iPhillipian-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1784B8131977366B006DEDF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iPhillipian.app/iPhillipian";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iPhillipian/iPhillipian-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iPhillipianTests/iPhillipianTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1784B8141977366B006DEDF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iPhillipian.app/iPhillipian";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iPhillipian/iPhillipian-Prefix.pch";
+				INFOPLIST_FILE = "iPhillipianTests/iPhillipianTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1784B7DE1977366A006DEDF9 /* Build configuration list for PBXProject "iPhillipian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1784B80D1977366A006DEDF9 /* Debug */,
+				1784B80E1977366A006DEDF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1784B80F1977366A006DEDF9 /* Build configuration list for PBXNativeTarget "iPhillipian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1784B8101977366A006DEDF9 /* Debug */,
+				1784B8111977366A006DEDF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1784B8121977366B006DEDF9 /* Build configuration list for PBXNativeTarget "iPhillipianTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1784B8131977366B006DEDF9 /* Debug */,
+				1784B8141977366B006DEDF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1784B7DB1977366A006DEDF9 /* Project object */;
+}
