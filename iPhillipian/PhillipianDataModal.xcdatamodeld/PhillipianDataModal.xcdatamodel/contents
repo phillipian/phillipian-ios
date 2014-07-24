@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="PHLArticle" representedClassName="PHLArticle" syncable="YES">
+        <attribute name="articleDate" attributeType="Date" syncable="YES"/>
+        <attribute name="body" attributeType="String" syncable="YES"/>
+        <attribute name="deck" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageCaption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageCredit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="issueDate" attributeType="Date" syncable="YES"/>
+        <attribute name="nid" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="url" attributeType="String" syncable="YES"/>
+        <attribute name="writer" attributeType="String" syncable="YES"/>
+        <relationship name="section" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PHLSection" inverseName="articles" inverseEntity="PHLSection" syncable="YES"/>
+    </entity>
+    <entity name="PHLSection" representedClassName="PHLSection" syncable="YES">
+        <attribute name="sectionName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="articles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PHLArticle" inverseName="section" inverseEntity="PHLArticle" syncable="YES"/>
+    </entity>
+    <fetchRequest name="ArticleWithNid" entity="PHLArticle" predicateString="nid == $NID"/>
+    <fetchRequest name="SectionsForName" entity="PHLSection" predicateString="sectionName LIKE[c] $NAME"/>
+    <elements>
+        <element name="PHLArticle" positionX="-63" positionY="-18" width="128" height="238"/>
+        <element name="PHLSection" positionX="205" positionY="81" width="128" height="73"/>
+    </elements>
+</model>

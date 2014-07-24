@@ -7,6 +7,11 @@
 //
 
 #import "PHLAppDelegate.h"
+#import "PHLConnectionHelper.h"
+#import "PHLPSCManager.h"
+#import "PHLSectionViewController.h"
+#import "PHLMenuViewController.h"
+#import "SWRevealViewController.h"
 
 @implementation PHLAppDelegate
 
@@ -14,6 +19,26 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    
+    //Make sure to get ALL articles if there are current ones (check until nid is matching)
+    [[PHLPSCManager sharedManager] purgeData];
+    [PHLPSCManager sharedManager];
+    [PHLConnectionHelper startWebRequests];
+    
+    
+    
+    
+    
+    PHLSectionViewController *sectionController = [[PHLSectionViewController alloc] init];
+    UINavigationController *sectionNav = [[UINavigationController alloc] initWithRootViewController:sectionController];
+    
+    PHLMenuViewController *menuController = [[PHLMenuViewController alloc] init];
+    UINavigationController *menuNav = [[UINavigationController alloc] initWithRootViewController:menuController];
+    
+    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:menuNav frontViewController:sectionNav];
+    
+    [self.window setRootViewController:revealController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
