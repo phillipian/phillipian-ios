@@ -15,6 +15,7 @@
 #import "PHLArticleCell.h"
 #import "SWRevealViewController.h"
 #import "PHLLoadingViewController.h"
+#import "PHLArticleViewController.h"
 
 NSString * const ArticleCellIdentifier = @"ArticleCellIdentifier";
 CGFloat const cellHeight = 152.0;
@@ -177,6 +178,14 @@ CGFloat const cellHeight = 152.0;
     [[cell thumbView] setImage:[UIImage imageWithData:currentArticle.thumbnail]];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PHLArticleViewController *articleView = [[PHLArticleViewController alloc] initWithArticle:[[self resultsController] objectAtIndexPath:indexPath]];
+    [[self navigationController] pushViewController:articleView animated:YES];
+    
 }
 
 @end

@@ -64,7 +64,10 @@ static NSString * const JSONArticleDateKey = @"article_date";
     [article setValue:[dict objectForKey:JSONTitleKey] forKeyPath:TitleKey];
     [article setValue:[dict objectForKey:JSONDeckKey] forKeyPath:DeckKey];
     [article setValue:[dict objectForKey:JSONWriterKey] forKeyPath:WriterKey];
-    [article setValue:[dict objectForKey:JSONBodyKey] forKeyPath:BodyKey];
+    
+    NSString *bodyString = [[dict objectForKey:JSONBodyKey] stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@" "];
+    
+    [article setValue:bodyString forKeyPath:BodyKey];
     [article setValue:[NSString stringWithFormat:@"%@%@", PhillipianURL, [dict objectForKey:JSONUrlKey]] forKeyPath:UrlToSiteKey];
     
     //check the dates

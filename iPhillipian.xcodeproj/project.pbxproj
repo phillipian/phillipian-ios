@@ -35,6 +35,9 @@
 		1784B834197744FE006DEDF9 /* PHLFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B833197744FE006DEDF9 /* PHLFetcher.m */; };
 		1784B837197747DD006DEDF9 /* PHLFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B836197747DD006DEDF9 /* PHLFormatter.m */; };
 		1784B83D19774E8D006DEDF9 /* PHLSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B83C19774E8D006DEDF9 /* PHLSectionViewController.m */; };
+		17A8DB2819858B3E00460D4F /* PHLArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8DB2619858B3E00460D4F /* PHLArticleViewController.m */; };
+		17A8DB2919858B3E00460D4F /* PHLArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A8DB2719858B3E00460D4F /* PHLArticleViewController.xib */; };
+		17A8DB2B19859F4D00460D4F /* Andover seal.png in Resources */ = {isa = PBXBuildFile; fileRef = 17A8DB2A19859F4D00460D4F /* Andover seal.png */; };
 		17ABDBA71981C66C0047B57B /* PHLSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 17ABDBA61981C66C0047B57B /* PHLSection.m */; };
 		17ABDBAA1981C66C0047B57B /* PHLArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 17ABDBA91981C66C0047B57B /* PHLArticle.m */; };
 		17B10FDD197C7B3300A37B83 /* PHLLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B10FDB197C7B3300A37B83 /* PHLLoadingViewController.m */; };
@@ -95,6 +98,10 @@
 		1784B836197747DD006DEDF9 /* PHLFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLFormatter.m; sourceTree = "<group>"; };
 		1784B83B19774E8D006DEDF9 /* PHLSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLSectionViewController.h; sourceTree = "<group>"; };
 		1784B83C19774E8D006DEDF9 /* PHLSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLSectionViewController.m; sourceTree = "<group>"; };
+		17A8DB2519858B3E00460D4F /* PHLArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLArticleViewController.h; sourceTree = "<group>"; };
+		17A8DB2619858B3E00460D4F /* PHLArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLArticleViewController.m; sourceTree = "<group>"; };
+		17A8DB2719858B3E00460D4F /* PHLArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLArticleViewController.xib; sourceTree = "<group>"; };
+		17A8DB2A19859F4D00460D4F /* Andover seal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Andover seal.png"; sourceTree = "<group>"; };
 		17ABDBA51981C66C0047B57B /* PHLSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLSection.h; sourceTree = "<group>"; };
 		17ABDBA61981C66C0047B57B /* PHLSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLSection.m; sourceTree = "<group>"; };
 		17ABDBA81981C66C0047B57B /* PHLArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLArticle.h; sourceTree = "<group>"; };
@@ -144,6 +151,7 @@
 		17186BF9197B7DEE00A5BD1F /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				17A8DB2A19859F4D00460D4F /* Andover seal.png */,
 				17186BF5197B7DEB00A5BD1F /* reveal-icon.png */,
 				17186BF6197B7DEB00A5BD1F /* reveal-icon@2x.png */,
 			);
@@ -269,6 +277,7 @@
 		1784B81719773681006DEDF9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				17A8DB2419858B2900460D4F /* Article Controller */,
 				17B10FD9197C7B1E00A37B83 /* Loading Screen */,
 				17186BFB197B7E1C00A5BD1F /* Menu Controller */,
 				17186BFA197B7E1400A5BD1F /* Section Controller */,
@@ -329,6 +338,16 @@
 				1784B82B19773EBA006DEDF9 /* PHLMainContext.m */,
 			);
 			name = "Manager and Context";
+			sourceTree = "<group>";
+		};
+		17A8DB2419858B2900460D4F /* Article Controller */ = {
+			isa = PBXGroup;
+			children = (
+				17A8DB2519858B3E00460D4F /* PHLArticleViewController.h */,
+				17A8DB2619858B3E00460D4F /* PHLArticleViewController.m */,
+				17A8DB2719858B3E00460D4F /* PHLArticleViewController.xib */,
+			);
+			name = "Article Controller";
 			sourceTree = "<group>";
 		};
 		17B10FD9197C7B1E00A37B83 /* Loading Screen */ = {
@@ -420,9 +439,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B10FDE197C7B3300A37B83 /* PHLLoadingViewController.xib in Resources */,
+				17A8DB2B19859F4D00460D4F /* Andover seal.png in Resources */,
 				1784B7F11977366A006DEDF9 /* InfoPlist.strings in Resources */,
 				1784B7F91977366A006DEDF9 /* Images.xcassets in Resources */,
 				17186BF8197B7DEB00A5BD1F /* reveal-icon@2x.png in Resources */,
+				17A8DB2919858B3E00460D4F /* PHLArticleViewController.xib in Resources */,
 				170272FF1978755F0007490F /* sampleJSONResponse.jsonp in Resources */,
 				17186BF0197B6C6C00A5BD1F /* PHLArticleCell.xib in Resources */,
 				17186BF7197B7DEB00A5BD1F /* reveal-icon.png in Resources */,
@@ -485,6 +506,7 @@
 				17B10FDD197C7B3300A37B83 /* PHLLoadingViewController.m in Sources */,
 				1784B837197747DD006DEDF9 /* PHLFormatter.m in Sources */,
 				17186BF4197B7D9300A5BD1F /* SWRevealViewController.m in Sources */,
+				17A8DB2819858B3E00460D4F /* PHLArticleViewController.m in Sources */,
 				17ABDBA71981C66C0047B57B /* PHLSection.m in Sources */,
 				1784B83119773F0D006DEDF9 /* PHLBuilder.m in Sources */,
 				17186BFE197B7E4000A5BD1F /* PHLMenuViewController.m in Sources */,
