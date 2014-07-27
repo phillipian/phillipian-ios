@@ -69,13 +69,16 @@ NSString * MenuCellIdentifier = @"MenuCellIdentifier";
     PHLLoadingViewController *loadingController = [[PHLLoadingViewController alloc] init];
     
     [sectionController setLoadingViewController:loadingController];
-    [[[sectionController navigationController] view] addSubview:[[sectionController loadingViewController] view]];
     
     //first check if it's the same section
     if ([indexPath row] == 0) {
-        if ([sectionController section] != nil) {
-            [[self revealViewController] setFrontViewPosition:FrontViewPositionRightMostRemoved animated:YES];
+        if ([sectionController section] == nil) {
+            NSLog(@"Same section!");
+            [[self revealViewController] revealToggle:sectionController];
+            return;
         }
+        [[[sectionController navigationController] view] addSubview:[[sectionController loadingViewController] view]];
+        [[self revealViewController] setFrontViewPosition:FrontViewPositionRightMostRemoved animated:YES];
         [sectionController setSection:nil];
         [sectionController setTitle:[self.sectionTitles objectAtIndex:[indexPath row]]];
         [[self revealViewController] revealToggle:sectionController];
@@ -89,7 +92,8 @@ NSString * MenuCellIdentifier = @"MenuCellIdentifier";
         return;
     }
     
-    [sectionController setSection:[self.sections objectAtIndex:[indexPath row]]];
+    [[[sectionController navigationController] view] addSubview:[[sectionController loadingViewController] view]];
+    [sectionController setSection:[self.sectionTitles objectAtIndex:[indexPath row]]];
     [sectionController setupTable];
     [sectionController setTitle:[self.sectionTitles objectAtIndex:[indexPath row]]];
     [[self revealViewController] setFrontViewPosition:FrontViewPositionRightMostRemoved animated:YES];

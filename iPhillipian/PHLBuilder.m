@@ -40,7 +40,7 @@ static NSString * const JSONArticleDateKey = @"article_date";
         [PHLBuilder buildArticle:dict];
     }
     
-    NSLog(@"Finished parsing articles from initial JSON req");
+    NSLog(@"Finished parsing articles from initial JSON req, posting notification");
     [[NSNotificationCenter defaultCenter] postNotificationName:ArticlesRecievedNotification object:nil];
     
 }
@@ -55,6 +55,7 @@ static NSString * const JSONArticleDateKey = @"article_date";
     
     if ([[PHLFetcher articleWithNid:nid inContext:[PHLMainContext sharedContext]] count] != 0) {
         NSLog(@"This article has been parsed before!");
+        NSLog(@"THIS IS STILL GOING TO PARSE IT, SINCE THE JSON IS TERRIBLE :((");
         [[PHLMainContext sharedContext] rollback];
         return;
     }

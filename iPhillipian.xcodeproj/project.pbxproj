@@ -29,14 +29,14 @@
 		1784B80C1977366A006DEDF9 /* iPhillipianTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B80B1977366A006DEDF9 /* iPhillipianTests.m */; };
 		1784B81D1977372C006DEDF9 /* PHLConnectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B81C1977372C006DEDF9 /* PHLConnectionHelper.m */; };
 		1784B82019773CAC006DEDF9 /* PhillipianDataModal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1784B81E19773CAC006DEDF9 /* PhillipianDataModal.xcdatamodeld */; };
-		1784B82319773E70006DEDF9 /* PHLSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B82219773E70006DEDF9 /* PHLSection.m */; };
-		1784B82619773E71006DEDF9 /* PHLArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B82519773E71006DEDF9 /* PHLArticle.m */; };
 		1784B82C19773EBA006DEDF9 /* PHLPSCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B82919773EBA006DEDF9 /* PHLPSCManager.m */; };
 		1784B82D19773EBA006DEDF9 /* PHLMainContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B82B19773EBA006DEDF9 /* PHLMainContext.m */; };
 		1784B83119773F0D006DEDF9 /* PHLBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B83019773F0D006DEDF9 /* PHLBuilder.m */; };
 		1784B834197744FE006DEDF9 /* PHLFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B833197744FE006DEDF9 /* PHLFetcher.m */; };
 		1784B837197747DD006DEDF9 /* PHLFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B836197747DD006DEDF9 /* PHLFormatter.m */; };
 		1784B83D19774E8D006DEDF9 /* PHLSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784B83C19774E8D006DEDF9 /* PHLSectionViewController.m */; };
+		17ABDBA71981C66C0047B57B /* PHLSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 17ABDBA61981C66C0047B57B /* PHLSection.m */; };
+		17ABDBAA1981C66C0047B57B /* PHLArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 17ABDBA91981C66C0047B57B /* PHLArticle.m */; };
 		17B10FDD197C7B3300A37B83 /* PHLLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B10FDB197C7B3300A37B83 /* PHLLoadingViewController.m */; };
 		17B10FDE197C7B3300A37B83 /* PHLLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B10FDC197C7B3300A37B83 /* PHLLoadingViewController.xib */; };
 		4DFF90B1004A4649AE96ABFA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 243AA500427F42A5AB99A616 /* libPods.a */; };
@@ -83,10 +83,6 @@
 		1784B81B1977372C006DEDF9 /* PHLConnectionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLConnectionHelper.h; sourceTree = "<group>"; };
 		1784B81C1977372C006DEDF9 /* PHLConnectionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLConnectionHelper.m; sourceTree = "<group>"; };
 		1784B81F19773CAC006DEDF9 /* PhillipianDataModal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhillipianDataModal.xcdatamodel; sourceTree = "<group>"; };
-		1784B82119773E70006DEDF9 /* PHLSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLSection.h; sourceTree = "<group>"; };
-		1784B82219773E70006DEDF9 /* PHLSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLSection.m; sourceTree = "<group>"; };
-		1784B82419773E71006DEDF9 /* PHLArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLArticle.h; sourceTree = "<group>"; };
-		1784B82519773E71006DEDF9 /* PHLArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLArticle.m; sourceTree = "<group>"; };
 		1784B82819773EBA006DEDF9 /* PHLPSCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLPSCManager.h; sourceTree = "<group>"; };
 		1784B82919773EBA006DEDF9 /* PHLPSCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLPSCManager.m; sourceTree = "<group>"; };
 		1784B82A19773EBA006DEDF9 /* PHLMainContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLMainContext.h; sourceTree = "<group>"; };
@@ -99,6 +95,10 @@
 		1784B836197747DD006DEDF9 /* PHLFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLFormatter.m; sourceTree = "<group>"; };
 		1784B83B19774E8D006DEDF9 /* PHLSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLSectionViewController.h; sourceTree = "<group>"; };
 		1784B83C19774E8D006DEDF9 /* PHLSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLSectionViewController.m; sourceTree = "<group>"; };
+		17ABDBA51981C66C0047B57B /* PHLSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLSection.h; sourceTree = "<group>"; };
+		17ABDBA61981C66C0047B57B /* PHLSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLSection.m; sourceTree = "<group>"; };
+		17ABDBA81981C66C0047B57B /* PHLArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLArticle.h; sourceTree = "<group>"; };
+		17ABDBA91981C66C0047B57B /* PHLArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLArticle.m; sourceTree = "<group>"; };
 		17B10FDA197C7B3300A37B83 /* PHLLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLLoadingViewController.h; sourceTree = "<group>"; };
 		17B10FDB197C7B3300A37B83 /* PHLLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLLoadingViewController.m; sourceTree = "<group>"; };
 		17B10FDC197C7B3300A37B83 /* PHLLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLLoadingViewController.xib; sourceTree = "<group>"; };
@@ -312,10 +312,10 @@
 		1784B82719773E75006DEDF9 /* Model Objects */ = {
 			isa = PBXGroup;
 			children = (
-				1784B82419773E71006DEDF9 /* PHLArticle.h */,
-				1784B82519773E71006DEDF9 /* PHLArticle.m */,
-				1784B82119773E70006DEDF9 /* PHLSection.h */,
-				1784B82219773E70006DEDF9 /* PHLSection.m */,
+				17ABDBA81981C66C0047B57B /* PHLArticle.h */,
+				17ABDBA91981C66C0047B57B /* PHLArticle.m */,
+				17ABDBA51981C66C0047B57B /* PHLSection.h */,
+				17ABDBA61981C66C0047B57B /* PHLSection.m */,
 			);
 			name = "Model Objects";
 			sourceTree = "<group>";
@@ -479,20 +479,20 @@
 			files = (
 				1784B82D19773EBA006DEDF9 /* PHLMainContext.m in Sources */,
 				1784B7F31977366A006DEDF9 /* main.m in Sources */,
-				1784B82619773E71006DEDF9 /* PHLArticle.m in Sources */,
 				1784B81D1977372C006DEDF9 /* PHLConnectionHelper.m in Sources */,
 				1784B82C19773EBA006DEDF9 /* PHLPSCManager.m in Sources */,
 				1784B82019773CAC006DEDF9 /* PhillipianDataModal.xcdatamodeld in Sources */,
 				17B10FDD197C7B3300A37B83 /* PHLLoadingViewController.m in Sources */,
 				1784B837197747DD006DEDF9 /* PHLFormatter.m in Sources */,
 				17186BF4197B7D9300A5BD1F /* SWRevealViewController.m in Sources */,
-				1784B82319773E70006DEDF9 /* PHLSection.m in Sources */,
+				17ABDBA71981C66C0047B57B /* PHLSection.m in Sources */,
 				1784B83119773F0D006DEDF9 /* PHLBuilder.m in Sources */,
 				17186BFE197B7E4000A5BD1F /* PHLMenuViewController.m in Sources */,
 				1784B83D19774E8D006DEDF9 /* PHLSectionViewController.m in Sources */,
 				1784B834197744FE006DEDF9 /* PHLFetcher.m in Sources */,
 				17186BEF197B6C6C00A5BD1F /* PHLArticleCell.m in Sources */,
 				1784B7F71977366A006DEDF9 /* PHLAppDelegate.m in Sources */,
+				17ABDBAA1981C66C0047B57B /* PHLArticle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

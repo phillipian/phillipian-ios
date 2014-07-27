@@ -2,7 +2,7 @@
 //  PHLArticle.m
 //  iPhillipian
 //
-//  Created by David Cao on 7/16/14.
+//  Created by David Cao on 7/24/14.
 //  Copyright (c) 2014 Phillipian. All rights reserved.
 //
 
@@ -24,18 +24,18 @@ NSString * const WriterKey = @"writer";
 
 @implementation PHLArticle
 
-@dynamic nid;
-@dynamic title;
-@dynamic deck;
-@dynamic writer;
+@dynamic articleDate;
 @dynamic body;
-@dynamic imageURL;
-@dynamic thumbnail;
+@dynamic deck;
 @dynamic imageCaption;
 @dynamic imageCredit;
-@dynamic url;
+@dynamic imageURL;
 @dynamic issueDate;
-@dynamic articleDate;
+@dynamic nid;
+@dynamic thumbnail;
+@dynamic title;
+@dynamic url;
+@dynamic writer;
 @dynamic section;
 
 @end

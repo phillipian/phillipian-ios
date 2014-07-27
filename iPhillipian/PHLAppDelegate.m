@@ -12,6 +12,7 @@
 #import "PHLSectionViewController.h"
 #import "PHLMenuViewController.h"
 #import "SWRevealViewController.h"
+#import "PHLLoadingViewController.h"
 
 @implementation PHLAppDelegate
 
@@ -22,6 +23,9 @@
     
     
     //Make sure to get ALL articles if there are current ones (check until nid is matching)
+    
+    //actually ignore that^ Probably just purge each launch, only load as they scroll down, api is too bare bones to do anything else
+    
     [[PHLPSCManager sharedManager] purgeData];
     [PHLPSCManager sharedManager];
     [PHLConnectionHelper startWebRequests];
@@ -29,9 +33,12 @@
     
     
     
-    
     PHLSectionViewController *sectionController = [[PHLSectionViewController alloc] init];
     UINavigationController *sectionNav = [[UINavigationController alloc] initWithRootViewController:sectionController];
+    
+    PHLLoadingViewController *loadingController = [[PHLLoadingViewController alloc] init];
+    [sectionController setLoadingViewController:loadingController];
+    [[sectionNav view] addSubview:[loadingController view]];
     
     PHLMenuViewController *menuController = [[PHLMenuViewController alloc] init];
     UINavigationController *menuNav = [[UINavigationController alloc] initWithRootViewController:menuController];

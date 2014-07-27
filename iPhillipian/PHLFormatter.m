@@ -9,6 +9,7 @@
 #import "PHLFormatter.h"
 #import "PHLArticle.h"
 #import "AFNetworking.h"
+#import "PHLMainContext.h"
 
 @implementation PHLFormatter
 
@@ -52,6 +53,8 @@
         
         NSData *data = responseObject;
         [article setValue:data forKey:ThumbnailKey];
+        
+        [[PHLMainContext sharedContext] save:nil];
         
         [[NSNotificationCenter defaultCenter] postNotificationName:ThumbnailReadyNotification object:nil];
         

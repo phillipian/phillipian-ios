@@ -2,7 +2,7 @@
 //  PHLSection.h
 //  iPhillipian
 //
-//  Created by David Cao on 7/16/14.
+//  Created by David Cao on 7/24/14.
 //  Copyright (c) 2014 Phillipian. All rights reserved.
 //
 
@@ -10,6 +10,8 @@
 #import <CoreData/CoreData.h>
 
 extern NSString * const SectionKey;
+
+@class PHLArticle;
 
 @interface PHLSection : NSManagedObject
 
@@ -19,8 +21,8 @@ extern NSString * const SectionKey;
 
 @interface PHLSection (CoreDataGeneratedAccessors)
 
-- (void)addArticlesObject:(NSManagedObject *)value;
-- (void)removeArticlesObject:(NSManagedObject *)value;
+- (void)addArticlesObject:(PHLArticle *)value;
+- (void)removeArticlesObject:(PHLArticle *)value;
 - (void)addArticles:(NSSet *)values;
 - (void)removeArticles:(NSSet *)values;
 

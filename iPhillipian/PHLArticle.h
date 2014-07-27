@@ -2,7 +2,7 @@
 //  PHLArticle.h
 //  iPhillipian
 //
-//  Created by David Cao on 7/16/14.
+//  Created by David Cao on 7/24/14.
 //  Copyright (c) 2014 Phillipian. All rights reserved.
 //
 
@@ -26,18 +26,18 @@ extern NSString * const WriterKey;
 
 @interface PHLArticle : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * nid;
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * deck;
-@property (nonatomic, retain) NSString * writer;
+@property (nonatomic, retain) NSDate * articleDate;
 @property (nonatomic, retain) NSString * body;
-@property (nonatomic, retain) NSString * imageURL;
-@property (nonatomic, retain) NSData * thumbnail;
+@property (nonatomic, retain) NSString * deck;
 @property (nonatomic, retain) NSString * imageCaption;
 @property (nonatomic, retain) NSString * imageCredit;
-@property (nonatomic, retain) NSString * url;
+@property (nonatomic, retain) NSString * imageURL;
 @property (nonatomic, retain) NSDate * issueDate;
-@property (nonatomic, retain) NSDate * articleDate;
+@property (nonatomic, retain) NSNumber * nid;
+@property (nonatomic, retain) NSData * thumbnail;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * url;
+@property (nonatomic, retain) NSString * writer;
 @property (nonatomic, retain) PHLSection *section;
 
 @end

@@ -57,7 +57,7 @@ static PHLConnectionHelper *requestController = nil;
         NSArray *articles =(NSArray *)[NSJSONSerialization JSONObjectWithData:responseObject
                                                                       options:0
                                                                         error:nil];
-        NSLog(@"JSON RESPONSE: %@", articles);
+//        NSLog(@"JSON RESPONSE: %@", articles);
         
         [PHLBuilder buildArticles:articles];
         
@@ -83,7 +83,7 @@ static PHLConnectionHelper *requestController = nil;
         NSArray *articles =(NSArray *)[NSJSONSerialization JSONObjectWithData:responseObject
                                                                       options:0
                                                                         error:nil];
-        NSLog(@"JSON RESPONSE: %@", articles);
+//        NSLog(@"JSON RESPONSE: %@", articles);
         
         [PHLBuilder buildArticles:articles];
         

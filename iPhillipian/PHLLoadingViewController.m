@@ -40,6 +40,7 @@
 - (void)doneLoading {
     
     NSLog(@"Done loading!");
+    NSLog(@"-------------------------------------");
     [[self view] removeFromSuperview];
     [self dismissViewControllerAnimated:NO completion:nil];
     

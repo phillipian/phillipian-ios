@@ -90,7 +90,7 @@ CGFloat const cellHeight = 152.0;
 }
 
 - (void)thumbReady {
-    NSLog(@"Thumb Ready");
+//    NSLog(@"Thumb Ready");
     [[self tableView] reloadData];
 }
  
@@ -112,10 +112,21 @@ CGFloat const cellHeight = 152.0;
     } else {
         NSLog(@"The section is %@", self.section);
         
-        //do we have anything with it?
+        
         if ([[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] count] == 0) {
+            NSLog(@"Section doesn't exist");
+        } else {
+            NSLog(@"Number of articles is: %d", [[[[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] objectAtIndex:0] articles] count]);
+        }
+        
+        //do we have anything with it?
+        
+        
+        if ([[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] count] == 0 /*|| [[[[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] objectAtIndex:0] articles] count] < 16*/) {
             //now request that section
-            [PHLConnectionHelper getArticlesForSection:self.section];
+            
+            NSString *sectionName = [self.section stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+            [PHLConnectionHelper getArticlesForSection:sectionName];
             return;
         }
         
@@ -138,6 +149,7 @@ CGFloat const cellHeight = 152.0;
     if ([self clear]) {
         return 0;
     }
+//    NSLog(@"Number of articles: %d", [[[self resultsController] fetchedObjects] count]);
     return [[[self resultsController] fetchedObjects] count];
 }
 
