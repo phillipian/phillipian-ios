@@ -112,16 +112,7 @@ CGFloat const cellHeight = 152.0;
         [self.tableView reloadData];
     } else {
         NSLog(@"The section is %@", self.section);
-        
-        
-        if ([[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] count] == 0) {
-            NSLog(@"Section doesn't exist");
-        } else {
-            NSLog(@"Number of articles is: %d", [[[[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] objectAtIndex:0] articles] count]);
-        }
-        
         //do we have anything with it?
-        
         
         if ([[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] count] == 0 /*|| [[[[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] objectAtIndex:0] articles] count] < 16*/) {
             //now request that section
@@ -175,7 +166,16 @@ CGFloat const cellHeight = 152.0;
     
     //CHECK THUMBNAIL STUFF HERE
     
-    [[cell thumbView] setImage:[UIImage imageWithData:currentArticle.thumbnail]];
+    if ([currentArticle thumbnail]) {
+        [[cell thumbView] setHidden:NO];
+        [[cell thumbView] setImage:[UIImage imageWithData:currentArticle.thumbnail]];
+        [[cell bodyLabel] setFrame:CGRectMake(cell.bodyLabel.frame.origin.x, cell.bodyLabel.frame.origin.y, 216, cell.bodyLabel.frame.size.height)];
+        [[cell writerLabel] setFrame:CGRectMake(cell.writerLabel.frame.origin.x, cell.writerLabel.frame.origin.y, 216, cell.writerLabel.frame.size.height)];
+    } else {
+        [[cell thumbView] setHidden:YES];
+        [[cell bodyLabel] setFrame:CGRectMake(cell.bodyLabel.frame.origin.x, cell.bodyLabel.frame.origin.y, 300, cell.bodyLabel.frame.size.height)];
+        [[cell writerLabel] setFrame:CGRectMake(cell.writerLabel.frame.origin.x, cell.writerLabel.frame.origin.y, 300, cell.writerLabel.frame.size.height)];
+    }
     
     return cell;
 }
