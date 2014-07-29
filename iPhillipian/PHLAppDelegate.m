@@ -30,7 +30,18 @@
     [PHLPSCManager sharedManager];
     [PHLConnectionHelper startWebRequests];
     
+    NSString *htmlString = @"&#63743; &amp; &#38; &lt; &gt; &trade; &copy; &hearts; &clubs; &spades; &diams;";
+    NSData *stringData = [htmlString dataUsingEncoding:NSUTF8StringEncoding];
     
+    NSDictionary *options = @{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType};
+    NSAttributedString *decodedString;
+    decodedString = [[NSAttributedString alloc] initWithData:stringData
+                                                     options:options
+                                          documentAttributes:NULL
+                                                       error:NULL];
+    
+    
+    NSLog(@"This is the HTML String: %@", [decodedString string]);
     
     
     PHLSectionViewController *sectionController = [[PHLSectionViewController alloc] init];

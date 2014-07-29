@@ -54,10 +54,10 @@ static PHLConnectionHelper *requestController = nil;
     
     AFHTTPRequestOperation *req = [[AFHTTPRequestOperation alloc] initWithRequest:urlReq];
     [req setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *articles =(NSArray *)[NSJSONSerialization JSONObjectWithData:responseObject
+        NSArray *articles = (NSArray *)[NSJSONSerialization JSONObjectWithData:responseObject
                                                                       options:0
                                                                         error:nil];
-//        NSLog(@"JSON RESPONSE: %@", articles);
+        NSLog(@"JSON RESPONSE: %@", articles);
         
         [PHLBuilder buildArticles:articles];
         

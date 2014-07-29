@@ -16,5 +16,6 @@
 @property (nonatomic) NSString *section;
 
 - (void)setupTable;
+- (void)clearTable;
 
 @end

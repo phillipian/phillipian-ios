@@ -82,11 +82,12 @@ NSString * MenuCellIdentifier = @"MenuCellIdentifier";
         [sectionController setSection:nil];
         [sectionController setTitle:[self.sectionTitles objectAtIndex:[indexPath row]]];
         [[self revealViewController] revealToggle:sectionController];
+        [sectionController clearTable];
         [sectionController setupTable];
         return;
     }
     
-    if ([self.sections objectAtIndex:[indexPath row]] == [sectionController section] ) {
+    if ([self.sectionTitles objectAtIndex:[indexPath row]] == [sectionController section] ) {
         NSLog(@"Same section!");
         [[self revealViewController] revealToggle:sectionController];
         return;
@@ -94,6 +95,7 @@ NSString * MenuCellIdentifier = @"MenuCellIdentifier";
     
     [[[sectionController navigationController] view] addSubview:[[sectionController loadingViewController] view]];
     [sectionController setSection:[self.sectionTitles objectAtIndex:[indexPath row]]];
+    [sectionController clearTable];
     [sectionController setupTable];
     [sectionController setTitle:[self.sectionTitles objectAtIndex:[indexPath row]]];
     [[self revealViewController] setFrontViewPosition:FrontViewPositionRightMostRemoved animated:YES];

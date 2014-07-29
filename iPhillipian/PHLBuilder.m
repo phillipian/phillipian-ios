@@ -60,14 +60,28 @@ static NSString * const JSONArticleDateKey = @"article_date";
         return;
     }
     
+    NSString *tempString;
+    NSAttributedString *temp;
+    
     [article setValue:nid forKeyPath:NidKey];
+    
     [article setValue:[dict objectForKey:JSONTitleKey] forKeyPath:TitleKey];
+    
     [article setValue:[dict objectForKey:JSONDeckKey] forKeyPath:DeckKey];
+    
     [article setValue:[dict objectForKey:JSONWriterKey] forKeyPath:WriterKey];
     
-    NSString *bodyString = [[dict objectForKey:JSONBodyKey] stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@" "];
+    tempString = [[dict objectForKey:JSONBodyKey] stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\n"];
+    temp = [[NSAttributedString alloc] initWithData:[tempString dataUsingEncoding:NSUTF8StringEncoding]
+                                            options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType}
+                                 documentAttributes:nil
+                                              error:nil];
+    
+    NSString *bodyString = [[dict objectForKey:JSONBodyKey] stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\n"];
+    bodyString = [bodyString stringByReplacingOccurrencesOfString:@"&amp;" withString:@"&"];
     
     [article setValue:bodyString forKeyPath:BodyKey];
+    
     [article setValue:[NSString stringWithFormat:@"%@%@", PhillipianURL, [dict objectForKey:JSONUrlKey]] forKeyPath:UrlToSiteKey];
     
     //check the dates

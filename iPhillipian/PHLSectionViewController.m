@@ -28,7 +28,6 @@ CGFloat const cellHeight = 152.0;
 
 - (void)articlesRecieved;
 - (void)thumbReady;
-- (void)clearTable;
 
 @end
 
