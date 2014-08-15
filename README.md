@@ -1,4 +1,4 @@
-phillipian-ios
+Phillipian-iOS
 ==============
 
 iPhillipian App for The Phillipian at Phillips Academy.
