@@ -19,6 +19,7 @@ CGFloat buffer = 8.0;
 @property (weak, nonatomic) UITextView *titleTextView;
 @property (weak, nonatomic) UITextView *writerTextView;
 @property (nonatomic) UIImageView *imageView;
+@property (weak, nonatomic) UITextView *imageCaptionView;
 @property (weak, nonatomic) UITextView *bodyTextView;
 
 @property (nonatomic) NSMutableArray *photos;
@@ -45,23 +46,29 @@ CGFloat buffer = 8.0;
     
     [self setTitleTextView:[[UITextView alloc] init]];
     [self setWriterTextView:[[UITextView alloc] init]];
+    [self setImageCaptionView:[[UITextView alloc] init]];
     [self setBodyTextView:[[UITextView alloc] init]];
     [self setImageView:[[UIImageView alloc] init]];
     
     [[self titleTextView] setText:[[self article] title]];
-    [[self titleTextView] setFont:[UIFont fontWithName:@"Helvetica Neue" size:19.0]];
+    [[self titleTextView] setFont:[UIFont fontWithName:@"HelveticaNeue" size:19.0]];
     [[self writerTextView] setText:[NSString stringWithFormat:@"By %@", [[self article] writer]]];
-    [[self writerTextView] setFont:[UIFont fontWithName:@"Helvetica Neue Thin" size:12.0]];
+    [[self writerTextView] setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:12.0]];
     [[self writerTextView] setTextColor:[UIColor darkGrayColor]];
+    [[self imageCaptionView] setText:[NSString stringWithFormat:@"%@\n%@", self.article.imageCaption, self.article.imageCredit]];
+    [[self imageCaptionView] setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:12.0]];
+    [[self imageCaptionView] setTextColor:[UIColor darkGrayColor]];
     [[self bodyTextView] setText:[[self article] body]];
     [[self bodyTextView] setFont:[UIFont fontWithName:@"Palatino" size:15.0]];
     
     [[self titleTextView] setScrollEnabled:NO];
     [[self writerTextView] setScrollEnabled:NO];
+    [[self imageCaptionView] setScrollEnabled:NO];
     [[self bodyTextView] setScrollEnabled:NO];
     
     [[self titleTextView] setEditable:NO];
     [[self writerTextView] setEditable:NO];
+    [[self imageCaptionView] setEditable:NO];
     [[self bodyTextView] setEditable:NO];
     
     CGSize titleSize = [[self titleTextView] sizeThatFits:CGSizeMake(self.view.frame.size.width - 2*edgeInset, MAXFLOAT)];
@@ -85,23 +92,29 @@ CGFloat buffer = 8.0;
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped)];
             [[self imageView] setUserInteractionEnabled:YES];
             [[self imageView] addGestureRecognizer:tap];
+            [[self imageView] setContentMode:UIViewContentModeScaleAspectFit];
             
             NSLog(@"Image fetch success");
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             LogObject(@"Image fetch failed");
         }];
-        [[self imageView] setContentMode:UIViewContentModeScaleAspectFit];
+        
+        CGSize imageCaptionSize = [[self imageCaptionView] sizeThatFits:CGSizeMake(self.view.frame.size.width - 2*edgeInset, MAXFLOAT)];
+        [[self imageCaptionView] layoutIfNeeded];
+        [[self imageCaptionView] setFrame:CGRectMake(edgeInset, self.imageView.frame.origin.y + imageHeight, imageCaptionSize.width, imageCaptionSize.height)];
+        
     }
     
     CGSize bodySize = [[self bodyTextView] sizeThatFits:CGSizeMake(self.view.frame.size.width - 2*edgeInset, MAXFLOAT)];
     [[self bodyTextView] layoutIfNeeded];
-    [[self bodyTextView] setFrame:CGRectMake(edgeInset, self.writerTextView.frame.origin.y + writerSize.height + imageHeight, bodySize.width, bodySize.height)];
+    [[self bodyTextView] setFrame:CGRectMake(edgeInset, self.writerTextView.frame.origin.y + writerSize.height + imageHeight + self.imageCaptionView.frame.size.height, bodySize.width, bodySize.height)];
     
     [[self scrollView] addSubview:[self titleTextView]];
     [[self scrollView] addSubview:[self writerTextView]];
     [[self scrollView] addSubview:[self bodyTextView]];
     [[self scrollView] addSubview:[self imageView]];
+    [[self scrollView] addSubview:[self imageCaptionView]];
     
     [[self scrollView] setContentSize:CGSizeMake(self.view.frame.size.width, self.bodyTextView.frame.origin.y + bodySize.height + edgeInset)];
     

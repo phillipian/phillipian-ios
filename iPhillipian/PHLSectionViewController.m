@@ -113,7 +113,7 @@ CGFloat const cellHeight = 152.0;
         NSLog(@"The section is %@", self.section);
         //do we have anything with it?
         
-        if ([[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] count] == 0 /*|| [[[[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] objectAtIndex:0] articles] count] < 16*/) {
+        if ([[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] count] == 0 || [[[[PHLFetcher SectionsWithName:self.section inContext:[PHLMainContext sharedContext]] objectAtIndex:0] articles] count] < 16) {
             //now request that section
             
             NSString *sectionName = [self.section stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
